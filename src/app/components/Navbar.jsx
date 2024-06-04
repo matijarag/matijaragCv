@@ -4,20 +4,19 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import CatIcon from "../../../public/cat-5.svg";
+import Image from "next/image";
 
 const navLinks = [
   {
-    title: "About",
+    title: "Sobre Mí",
     path: "#about",
   },
   {
-    title: "Projects",
+    title: "Experiencia",
     path: "#projects",
   },
-  {
-    title: "Contact",
-    path: "#contact",
-  },
+
 ];
 
 const Navbar = () => {
@@ -30,7 +29,9 @@ const Navbar = () => {
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          LOGO
+          <div style={{ height: "50px", width: "50px" }}>
+            <Image src={CatIcon} alt="Cat Icon" />
+          </div>
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (

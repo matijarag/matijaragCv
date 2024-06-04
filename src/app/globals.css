@@ -25,3 +25,18 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.skills-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.skills-container ul {
+  margin-right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+  }
+}
